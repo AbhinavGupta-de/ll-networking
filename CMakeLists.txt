@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 4.0)
+project(networks_hft)
+find_package(Boost REQUIRED)
+set(CMAKE_CXX_STANDARD 20)
+add_executable(networks_hft main.cpp mmap/producer.cpp mmap/consumer.cpp mmap/consumer.h mmap/producer.h)
+target_include_directories(networks_hft PRIVATE ${Boost_INCLUDE_DIRS})
