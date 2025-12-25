@@ -11,6 +11,7 @@ int main(int argSize, char** args) {
     {
         Producer producer(shm_name);
         producer.toString();
+        producer.run();
     }
     else
     {
